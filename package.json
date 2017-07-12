@@ -1,0 +1,16 @@
+{
+  "name": "streamer",
+  "version": "1.0.0",
+  "description": "A node program for making chromecast for local files easier",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "trevDev",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.3",
+    "opn": "^5.1.0",
+    "pug": "^2.0.0-rc.2"
+  }
+}
