@@ -1,4 +1,5 @@
 var fs = require('fs');
+var vidparse = require('./parser.js');
 
 module.exports = function(app) {
 
@@ -13,12 +14,7 @@ module.exports = function(app) {
 
                 vids = vids.map(function(vid){
 
-                    return {
-
-                        name: vid,
-                        uri: encodeURIComponent(vid)
-
-                    }
+                    return vidparse.getObj(vid);
 
                 });
 
@@ -76,7 +72,7 @@ module.exports = function(app) {
 
     app.get('/vid/:vid', function(req, res){
 
-        var vid = `${req.params.vid}`;
+        var vid = vidparse.getObj(req.params.vid);
 
         res.render('video.pug', {vid: vid});
 

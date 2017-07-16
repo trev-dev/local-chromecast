@@ -1,7 +1,7 @@
 extends layout.pug
 block content
-    h1.mb-4= decodeURI(vid).split('.').slice(0,1)
-    video(src=`/vids/${vid}`, controls)
-    a.btn.btn-secondary.float-left(href=`previous/${vid}`) Previous
-    a.btn.btn-secondary.float-right(href=`next/${vid}`) Next
+    h1.mb-4= vid.name
+    video(src=`/vids/${vid.uri}`, controls)
+    a.btn.btn-secondary.float-left(href=`previous/${vid.uri}`) Previous
+    a.btn.btn-secondary.float-right(href=`next/${vid.uri}`) Next
     a.btn.btn-primary(href="/") Return to Index
