@@ -74,7 +74,7 @@ module.exports = function(app) {
 
         var vid = vidparse.getObj(req.params.vid);
 
-        res.render('video.pug', {vid: vid});
+        res.render('video.pug', {vid: vid, pretty:true});
 
     });
 
